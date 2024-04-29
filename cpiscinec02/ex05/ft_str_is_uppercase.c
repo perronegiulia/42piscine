@@ -1,0 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gmaia-pe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/26 15:36:50 by gmaia-pe          #+#    #+#             */
+/*   Updated: 2023/07/26 16:22:24 by gmaia-pe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//#include<stdio.h>
+
+int	ft_str_is_uppercase(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (str[i] == '\0')
+	{
+		return (1);
+	}
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			i++;
+		}
+		else
+			return (0);
+	}
+	return (1);
+}
+/*
+int main()
+{
+	printf("letras maiusculas: %d\n", ft_str_is_uppercase("AJFM"));
+	printf("letras maiusculas e minusculas: %d\n", ft_str_is_uppercase("afFhjnG"));
+	printf("numeros e letras: %d\n" , ft_str_is_uppercase("1dhf86AD6"));
+	printf("vazio: %d\n", ft_str_is_uppercase(""));
+}
+*/
